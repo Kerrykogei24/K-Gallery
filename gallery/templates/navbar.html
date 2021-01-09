@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<title>My Example</title>
+
+<!-- Bootstrap CSS -->
+{% block super %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> {% endblock %}
+<nav class="navbar ">
+    <div class="container-fluid">
+
+        <!-- BRAND -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+            <a class="navbar-brand styler" href="/">@Galleria</a>
+        </div>
+
+        <!-- COLLAPSIBLE NAVBAR -->
+        <div class="collapse navbar-collapse" id="alignment-example">
+
+            <!-- Links -->
+            <div class="col-sm-4 col-md-4 navbar-right">
+
+                <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search Picture" name="image">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+</nav>
+
+<!-- jQuery library -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- Initialize Bootstrap functionality -->
+<script>
+    // Initialize tooltip component
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    // Initialize popover component
+    $(function() {
+        $('[data-toggle="popover"]').popover()
+    })
+</script>
+<style>
+    .styler {
+        font-family: 'Shadows Into Light', cursive;
+        font-size: 250%;
+        text-decoration: underline;
+        color: white;
+    }
+    
+    nav {
+        background-image: url("https://us.123rf.com/450wm/foreverrich/foreverrich1705/foreverrich170500312/78766739-soft-blue-gradient-white-light-background.jpg?ver=6");
+        /* background-position: center; */
+        background-attachment: scroll;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: fixed !important;
+        width: 100% !important;
+    }
+</style>
