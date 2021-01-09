@@ -27,3 +27,8 @@ def search_results(request):
 def viewPics_by_location(request,location):
     locationpic = Picture.view_pictures_by_location(location)
     return render(request,"location_pics.html",{"locationpic":locationpic})
+
+
+def viewPics_by_category(request,category):
+    photos =Picture.view_pictures_by_category(category)
+    return render (request,'category.html',{"photos":photos})
