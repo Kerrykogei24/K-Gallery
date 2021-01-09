@@ -4,3 +4,6 @@ from .models import Author
 
 # Create your views here.
 
+def pic(request):
+    
+    return render(request,'pics.html')
