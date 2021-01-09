@@ -9,15 +9,6 @@ class Author(models.Model):
     phone_number = models.CharField(max_length=300, blank=True)
 
 
-
-
-    def save_author(self):
-        self.save()
-
-    def delete_author(self):
-        self.delete()
-
-  
     def __str__(self):
         return self.first_name
 
