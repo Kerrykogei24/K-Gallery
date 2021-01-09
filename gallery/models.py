@@ -61,4 +61,9 @@ class Location(models.Model):
         return locations
 
 
+class Category(models.Model):
+    category_name = models.CharField(max_length=80)
+
+
+
     
