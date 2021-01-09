@@ -17,16 +17,7 @@ class Author(models.Model):
     def delete_author(self):
         self.delete()
 
-    @classmethod
-    def search_by_photo_category(cls,search_term):
-        photo = cls.objects.filter(name__icontains = search_term)
-        return photo
-
-    def update_image(self, Name=None, category=None):
-        self.name = Name if Name else self.Name
-        self.photo_category = category if category else self.photo_category 
-        self.save() 
-
+  
     def __str__(self):
         return self.first_name
 
@@ -39,5 +30,22 @@ class Picture(models.Model):
     category = models.ForeignKey(Category, on_delete = models.CASCADE,)
     author = models.ForeignKey(Author,on_delete = models.CASCADE)
 
+
+
+
+
+    def save_pic(self):
+        self.save()
+        
+    def delete_image(self):
+        self.delete()
+
+    
+    @classmethod
+    def all_pics(cls):
+        pics = cls.objects.all()
+        return pics
+
+    
 
     
