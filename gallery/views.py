@@ -23,3 +23,7 @@ def search_results(request):
     else:
         message = "You have not entered anything to search"
         return render(request,'search.html',{"message":message})
+
+def viewPics_by_location(request,location):
+    locationpic = Picture.view_pictures_by_location(location)
+    return render(request,"location_pics.html",{"locationpic":locationpic})
