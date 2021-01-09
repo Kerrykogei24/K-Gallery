@@ -22,5 +22,10 @@ class Author(models.Model):
     @classmethod
     def search_by_photo_category(cls,search_term):
         photo = cls.objects.filter(name__icontains = search_term)
-        return photo 
+        return photo
+
+    def update_image(self, Name=None, category=None):
+        self.name = Name if Name else self.Name
+        self.photo_category = category if category else self.photo_category 
+        self.save() 
 
