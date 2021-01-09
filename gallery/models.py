@@ -17,4 +17,10 @@ class Author(models.Model):
         self.save()
 
     def delete_author(self):
-        self.save()
+        self.delete()
+
+    @classmethod
+    def search_by_photo_category(cls,search_term):
+        photo = cls.objects.filter(name__icontains = search_term)
+        return photo 
+
