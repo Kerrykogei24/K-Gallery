@@ -9,8 +9,6 @@ class Author(models.Model):
     phone_number = models.CharField(max_length=300, blank=True)
 
 
-    def __str__(self):
-        return self.first_name
 
 
     def save_author(self):
@@ -28,4 +26,7 @@ class Author(models.Model):
         self.name = Name if Name else self.Name
         self.photo_category = category if category else self.photo_category 
         self.save() 
+
+    def __str__(self):
+        return self.first_name
 
