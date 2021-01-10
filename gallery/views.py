@@ -12,6 +12,13 @@ def pics(request):
     return render(request,'pics.html',{'pictures': pictures, 'category': category, 'location_pics':location_pics })
 
 
+def single_pic(request,id):
+    try:
+        pic = Picture.objects.get(id = id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"single_pic.html", {"pic":pic})
+
 def search_results(request):
     if 'image' in request.GET and request.GET["image"]:
         search_term = request.GET.get('image')
