@@ -2,8 +2,8 @@
 <!-- Filter function for Category -->
 <main class="wrapper">
     <section class="section1">
-        <h1>Welcome to @Galleria</h1>
-        <p style="padding-bottom: 80px;">A collection of best works from the best atrists</p>
+        <h1>Welcome to K Gallery</h1>
+        <p style="padding-bottom: 80px;">Memories in a Picture</p>
 
         <div class="row">
             <div class="col-md-3 col-sm-3 "></div>
@@ -20,7 +20,7 @@
             <!-- Scripts for category filter functions -->
             <script>
                 /* When the user clicks on the button, 
-                                                                                                                                                                                toggle between hiding and showing the dropdown content */
+                                                                                                                                                                                                                                                                                                                                                                                                toggle between hiding and showing the dropdown content */
                 function myFunction1() {
                     document.getElementById("myDropdown").classList.toggle("show");
                 }
@@ -109,7 +109,7 @@
                     <h4 class="modal-title" style="text-align: center;">{{pic.name}}</h4>
                 </div>
                 <div class="modal-body">
-                    <img width="400px" class="img-responsive column" src=" {{pic.image}} " alt="img">
+                    <img width="400px" class="img-responsive column" src=" {{pic.image.url}} " alt="img">
                     <p>{{pic.description}}</p>
                     <p>{{pic.category}}</p>
                     <p> {{pic.location}} </p>
