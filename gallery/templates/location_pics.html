@@ -11,7 +11,7 @@
 
             <button type="button" class="btn btn-styled" data-toggle="modal" data-target="#myModal{{one_pic.id}}">
         <img width="400px" class="img-responsive" src=" {{one_pic.image.url}} " alt="one pic image">
- 
+   
     </button> <br>
             <a class="btn btn-success" href="/single_pic/{{one_pic.id}} ">More</a> {% endfor %} {% for one_pic in locationpic %}
             <div class="modal fade" id="myModal{{one_pic.id}}" role="dialog">
