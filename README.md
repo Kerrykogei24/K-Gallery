@@ -1,6 +1,6 @@
 ## K GallerY
 # Author
-KERRY KIPCHUMBA KOGEI
+**KERRY KIPCHUMBA KOGEI**
 
 # Description
 K GALLERY is an application that lets you view images from different photographers and artists in all categories.
