@@ -7,7 +7,7 @@
             <h1> {{pic.name}} </h1>
             <h2> {{pic.description}} </h2>
 
-            <button type="button" class="btn btn-styled" data-toggle="modal" data-target="#myModal{{one_pic.id}}">
+            <button type="button" class="btn btn-styled" data-toggle="modal" data-target="#myModal{{pic.id}}">
             <img width="400px" src=" {{pic.image.url}} " class="img-responsive" alt="one pic image">
             <a class="btn btn-success" href="/single_pic/{{pic.id}} ">More</a> 
         </div>
@@ -54,6 +54,10 @@
             background-repeat: no-repeat;
             text-align: center;
             color: #fff;
+        }
+        
+        .modal {
+            color: black;
         }
     </style>
     {% endblock %}
